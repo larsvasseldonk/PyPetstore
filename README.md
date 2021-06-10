@@ -1,9 +1,9 @@
 
-This is a command-line tool that helps you manage sales processes. It is a very basic application, without much functionality.
+# SALIE
 
-The app is built to test out a tool that splits up monolithic software to predict good microservice boundaries. 
+Salie is a very basic command-line tool written in Python to manage sales processes. The app is mainly build as a ground truth to test a tool that splits monolithic software into microservices. However, the application can be used for other purposes too. Feel free to use it as a start for your own project.
 
-
+**Getting started**
 Use the following command to run the application:
 
 `python -m salie.main`
