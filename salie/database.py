@@ -43,8 +43,8 @@ sql_create_orderdetails_table = '''CREATE TABLE IF NOT EXISTS orderdetails (
 
 class Database:
     def __init__(self):
-        self.name = 'Sales Database'
-        self.db_file = os.path.join(os.getcwd(), 'data' + os.sep + 'sales.db')
+        self.name = 'Salie Database'
+        self.db_file = os.path.join(os.getcwd(), 'data' + os.sep + 'salie.db')
         self.conn = self.create_connection()
         self.tables = self.create_tables()
 
