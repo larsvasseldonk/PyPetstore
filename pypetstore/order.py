@@ -3,10 +3,10 @@ This module provides functions to manage orders.
 
 '''
 
-from salie.customer import Customer
-from salie.orderdetail import view_orderdetails
+from pypetstore.customer import Customer
+from pypetstore.orderdetail import view_orderdetails
 
-from salie.database import db
+from pypetstore.database import db
 
 class Order:
     def __init__(self, customer, status = 'Open'):

@@ -3,7 +3,7 @@ This module provides functions to manage products.
 
 '''
 
-from salie.database import db
+from pypetstore.database import db
 
 class Product:
 

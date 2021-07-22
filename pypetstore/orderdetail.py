@@ -3,12 +3,12 @@ This module provides functions to manage orderdetails.
 
 '''
 
-# from salie.order import Order
+# from pypetstore.order import Order
 
-import salie.order
-from salie.product import Product, view_products
+import pypetstore.order
+from pypetstore.product import Product, view_products
 
-from salie.database import db
+from pypetstore.database import db
 
 class Orderdetail:
     def __init__(self, order, product, quantity: int):
@@ -50,7 +50,7 @@ class Orderdetail:
         sql = '''SELECT * FROM orderdetails WHERE orderdetail_id = ?'''
         data = c.execute(sql, str(orderdetail_id)).fetchone()
         if data:
-            order = salie.order.Order.search_order(data[2])
+            order = pypetstore.order.Order.search_order(data[2])
             product = Product.search_product(data[3])
             if order and product:
                 orderdetail = Orderdetail(order, product)
@@ -66,7 +66,7 @@ class Orderdetail:
 
 def view_orderdetails(order_id):
     '''Print orderdetails of an order.'''
-    if salie.order.Order.search_order(order_id):
+    if pypetstore.order.Order.search_order(order_id):
         c = db.conn.cursor()
         sql = '''SELECT od.orderdetail_id, od.order_id, od.quantity, p.name, c.name
                     FROM orderdetails as od 
@@ -90,7 +90,7 @@ def view_orderdetails(order_id):
 
 def create_orderdetails():
     order_id = input('Enter order_id: ')
-    order = salie.order.Order.search_order(order_id)
+    order = pypetstore.order.Order.search_order(order_id)
     if order:
         view_products()
         product_id = input('Enter product_id: ')

@@ -3,21 +3,21 @@ This is the main module and provides the whole workflow.
 
 '''
 
-from salie.customer import print_customers_menu, view_customers, create_customer, update_customer, delete_customer
-from salie.product import print_products_menu, view_products, create_product, update_product, delete_product
-from salie.order import print_orders_menu, view_orders, view_order, create_order, delete_order
-from salie.orderdetail import view_orderdetails, create_orderdetails
+from pypetstore.customer import print_customers_menu, view_customers, create_customer, update_customer, delete_customer
+from pypetstore.product import print_products_menu, view_products, create_product, update_product, delete_product
+from pypetstore.order import print_orders_menu, view_orders, view_order, create_order, delete_order
+from pypetstore.orderdetail import view_orderdetails, create_orderdetails
 
-from salie.util import print_main_menu
+from pypetstore.util import print_main_menu
 
-# import salie.util
-# import salie.product
-# import salie.database
-# import salie.customer
-# import salie.order
-# import salie.orderdetail
+# import pypetstore.util
+# import pypetstore.product
+# import pypetstore.database
+# import pypetstore.customer
+# import pypetstore.order
+# import pypetstore.orderdetail
 
-from salie.database import db
+from pypetstore.database import db
 
 if __name__ == '__main__':
     loop = True
