@@ -3,7 +3,7 @@ This module provides functions to manage customers.
 
 '''
 
-from salie.database import db
+from pypetstore.database import db
 
 class Customer:
 
