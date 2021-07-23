@@ -101,26 +101,3 @@ def create_orderdetails():
             orderdetail.to_db()
             print(f'Product {product.get_name()} with id {product.get_id()} successfully added to Order {order.get_id()}.')
             
-class Test():
-    def __init__(self, name):
-        self.name = name
-        
-    def foo():
-        def hello():
-            pass
-        hello()
-            
-def test_3():
-    pass
-    
-def test_1():
-    test_3()
-    def test_nested():
-        create_orderdetails()
-        def test_4():
-            pass
-        test_4()
-    test_nested()
-    
-
-# Does test_1 also include test_nested dependencies?
