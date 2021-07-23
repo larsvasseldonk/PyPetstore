@@ -53,7 +53,7 @@ class Orderdetail:
             order = pypetstore.order.Order.search_order(data[2])
             product = Product.search_product(data[3])
             if order and product:
-                orderdetail = Orderdetail(order, product)
+                orderdetail = Orderdetail(order, product, data[1])
                 orderdetail.set_id(data[0])
             else:
                 print('Product or order not found.')
