@@ -6,6 +6,6 @@ PyPetstore is a very basic command-line tool written in Python that helps managi
 ## Getting started
 Use the following command to run the application:
 
-`python -m salie.main`
+`python -m pypetstore.main`
 
 This means that you have to run the app as a module, and not as a Python script.
